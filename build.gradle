@@ -1,0 +1,24 @@
+plugins {
+    id 'java' // Apply the Java plugin
+    id 'application' // Apply the Application plugin
+}
+
+application {
+    mainClass = 'com.chess.JChess' // Specify the main class using the application block
+}
+repositories {
+    mavenCentral() // Use Maven Central repository to fetch dependencies
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:33.4.0-jre' // Add Guava library
+    testImplementation 'junit:junit:4.13.2' // JUnit for testing
+    implementation 'org.apache.xmlgraphics:batik-transcoder:1.18' // Check for the latest version
+    implementation 'org.apache.xmlgraphics:batik-dom:1.18'
+    implementation 'org.apache.xmlgraphics:batik-svggen:1.18'
+    // implementation 'org.apache.xmlgraphics:batik-svg:1.18'
+    implementation 'org.apache.xmlgraphics:batik-anim:1.18'
+    implementation 'org.apache.xmlgraphics:batik-awt-util:1.18'
+    implementation 'org.apache.xmlgraphics:batik-gvt:1.18'
+    implementation 'org.apache.xmlgraphics:batik-bridge:1.18'
+}
