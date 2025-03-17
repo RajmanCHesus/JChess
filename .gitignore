@@ -1,0 +1,14 @@
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore build directories
+build/
+bin/
+
+# Ignore Gradle files
+.gradle/
+gradle/
+
+# Ignore libraries if they are managed by Gradle
+# libraries/
