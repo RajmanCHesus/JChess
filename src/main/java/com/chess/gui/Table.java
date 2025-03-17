@@ -129,7 +129,7 @@ public class Table {
                     File gifFile = new File(imageDir, pieceCode + ".gif");
                     File svgFile = new File(imageDir, pieceCode + ".svg");
 
-                    BufferedImage image = null;
+                    BufferedImage image = null;//test
 
                     if (pngFile.exists()) {
                         image = ImageIO.read(pngFile);
