@@ -134,7 +134,7 @@ public class Table {
                     if (pngFile.exists()) {
                         image = ImageIO.read(pngFile);
                     } else if (gifFile.exists()) {
-                        image = ImageIO.read(gifFile); // GIFs work natively with ImageIO
+                        image = ImageIO.read(gifFile);
                     } else if (svgFile.exists()) {
                         image = convertSvgToPng(svgFile, 45, 45);
                     }
