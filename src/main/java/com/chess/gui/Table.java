@@ -42,7 +42,7 @@ public class Table {
 
     private final Color lightTileColor = Color.decode("#EEEED2");
     private final Color darkTileColor = Color.decode("#769656");
-    private static String defaultPieceImagesPath = "../../../../picture/chess_1Kbyte_gambit";
+    private static String defaultPieceImagesPath = "../../../../picture/fancy";
 
     public Table() {
         this.gameFrame = new JFrame("JChess");
@@ -122,14 +122,14 @@ public class Table {
                             .substring(0, 1) +
                             board.getTile(this.tileId).getPiece().toString();
                     ;
-                    File imageDir = new File("picture/cases");
+                    File imageDir = new File("picture/fancy");
 
                     // Check for files in order: PNG → GIF → SVG
                     File pngFile = new File(imageDir, pieceCode + ".png");
                     File gifFile = new File(imageDir, pieceCode + ".gif");
                     File svgFile = new File(imageDir, pieceCode + ".svg");
 
-                    BufferedImage image = null;//test
+                    BufferedImage image = null;// test
 
                     if (pngFile.exists()) {
                         image = ImageIO.read(pngFile);

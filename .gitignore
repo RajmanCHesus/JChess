@@ -1,5 +1,8 @@
-*
-!/src/*
-!/picturec/*
-!README.md
-!LICENSE
+.gradle/
+build/
+bin/
+.idea/
+gradle/
+libraries/
+gradlew.bat
+gradlew
