@@ -5,10 +5,16 @@ import javax.swing.*;
 
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
+import com.chess.engine.board.Move;
+import com.chess.engine.board.Tile;
+import com.chess.engine.pieces.Piece;
+import com.chess.engine.player.MoveTransition;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -35,6 +41,9 @@ public class Table {
 
     private final BoardPanel boardPanel;
     private final Board chessBoard;
+    private Tile sourceTile;
+    private Tile destinationTile;
+    private Piece humanMovedPiece;
 
     private final static Dimension OUTER_FRAME_DIMENSION = new Dimension(600, 600);
     private final static Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350);
@@ -111,6 +120,46 @@ public class Table {
             setPreferredSize(TILE_PANEL_DIMENSION);
             assignTileColor();
             assignTilePieceIcon(chessBoard);
+            // addMouseListener(new MouseListener() {
+            //     @Override
+            //     public void mouseClicked(final MouseEvent e) {
+
+            //         if (isRightMouseButton(e)) {
+            //             sourceTile = null;
+            //             destinationTile = null;
+            //             humanMovedPiece = null;
+
+            //         } else if (isLeftMouseButton(e)) {
+
+            //             if (sourceTile == null) {
+            //                 sourceTile = chessBoard.getTile(tileId);
+            //                 humanMovedPiece = sourceTile.getPiece();
+            //                 if (humanMovedPiece == null) {
+            //                     sourceTile = null;
+            //                 }
+            //             } else {
+            //                 destinationTile = chessBoard.getTile(tileId);
+            //                 final Move move = null;
+            //             }
+            //         }
+
+            //     }
+
+            //     @Override
+            //     public void mousePressed(final MouseEvent e) {
+
+            //     }
+
+            //     @Override
+            //     public void mouseEntered(final MouseEvent e) {
+
+            //     }
+
+            //     @Override
+            //     public void mouseExited(final MouseEvent e) {
+
+            //     }
+            // });
             validate();
         }
 

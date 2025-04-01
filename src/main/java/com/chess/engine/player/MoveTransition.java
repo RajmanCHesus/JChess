@@ -18,7 +18,6 @@ public class MoveTransition {
     }
 
     public MoveStatus getMoveStatus() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getMoveStatus'");
+        return this.moveStatus;
     }
 }
